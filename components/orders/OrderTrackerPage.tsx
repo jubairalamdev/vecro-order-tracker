@@ -2,14 +2,17 @@
 
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import ContactSection from "./ContactSection";
 import OrderHeader from "./OrderHeader";
 import Orders from "./Orders";
 import ProductModal from "./ProductModal";
+import ReportIssueModal from "./ReportIssueModal";
 import { orders as initialOrders } from "./orderData";
 
 export default function OrderTrackerPage() {
   const [orders, setOrders] = useState(initialOrders);
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
+  const [isReportModalOpen, setIsReportModalOpen] = useState(false);
 
   const selectedOrder =
     orders.find((order) => order.id === selectedOrderId) ?? null;
@@ -54,6 +57,8 @@ export default function OrderTrackerPage() {
           </div>
 
           <Orders orders={orders} onViewOrder={handleViewOrder} />
+
+          <ContactSection onReportIssue={() => setIsReportModalOpen(true)} />
         </section>
       </div>
 
@@ -64,7 +69,11 @@ export default function OrderTrackerPage() {
         onCancelOrder={handleCancelOrder}
       />
 
-      <ToastContainer position="bottom-right" />
-    </main>
+      <ReportIssueModal
+        isOpen={isReportModalOpen}
+        onClose={() => setIsReportModalOpen(false)}
+      />
+
+      <ToastContainer position="bottom-right" />    </main>
   );
 }
