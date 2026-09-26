@@ -1,5 +1,6 @@
 => Task 1: Order Tracking Screen
 => Used ChatGPT
+=> Conversation Link: https://chatgpt.com/share/6ab7cf3b-7f98-83ee-a39c-7453354fac75
 
 #### Prompt no. 1: #### 
 You are a senior Frontend web developer. You will design a purple-white themed e-commerce Order Tracking page using Next.js, Tailwind CSS, Javascript, and React Icons for icons library. This tracker will be handled with mock json data. So now your work is listed below (components):
