@@ -1,7 +1,6 @@
 "use client";
 
 import OrderHeader from "./OrderHeader";
-import { orders } from "./orderData";
 
 export default function OrderTrackerPage() {
   return (
@@ -24,10 +23,6 @@ export default function OrderTrackerPage() {
               place.
             </p>
           </div>
-
-          <p className="text-sm text-zinc-500">
-            {orders.length} orders found
-          </p>
         </section>
       </div>
     </main>
