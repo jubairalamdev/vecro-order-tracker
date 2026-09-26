@@ -12,36 +12,42 @@ export const statusConfig: Record<OrderStatus, OrderStatusConfig> = {
   ordered: {
     label: "Order placed",
     color: "bg-purple-500",
+    borderColor: "border-l-purple-500",
     icon: FiShoppingBag,
   },
 
   processing: {
     label: "Processing",
     color: "bg-blue-500",
+    borderColor: "border-l-blue-500",
     icon: FiPackage,
   },
 
   shipped: {
     label: "Shipped",
     color: "bg-orange-500",
+    borderColor: "border-l-orange-500",
     icon: FiTruck,
   },
 
   out_for_delivery: {
     label: "Out for delivery",
     color: "bg-yellow-500",
+    borderColor: "border-l-yellow-500",
     icon: FiNavigation,
   },
 
   delivered: {
     label: "Delivered",
     color: "bg-green-500",
+    borderColor: "border-l-green-500",
     icon: FiCheckCircle,
   },
 
   cancelled: {
     label: "Cancelled",
     color: "bg-red-500",
+    borderColor: "border-l-red-500",
     icon: FiXCircle,
   },
 };

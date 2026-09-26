@@ -26,5 +26,6 @@ export interface Order {
 export interface OrderStatusConfig {
   label: string;
   color: string;
+  borderColor: string;
   icon: IconType;
 }

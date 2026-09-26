@@ -16,9 +16,11 @@ export default function OrderCard({ order, onViewOrder }: OrderCardProps) {
   const StatusIcon = status.icon;
 
   return (
-    <article className="flex items-center gap-3 rounded-full border border-zinc-200 bg-white p-2 sm:gap-4">
+    <article
+      className={`flex items-center gap-3 rounded-full border border-zinc-200 border-l-4 bg-white p-2 sm:gap-4 sm:border-l sm:border-l-zinc-200 ${status.borderColor}`}
+    >
       <div
-        className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${status.color}`}
+        className={`hidden h-14 w-14 shrink-0 items-center justify-center rounded-full sm:flex ${status.color}`}
       >
         <StatusIcon className="h-5 w-5 text-white" aria-hidden="true" />
       </div>
