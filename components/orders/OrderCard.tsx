@@ -16,7 +16,7 @@ export default function OrderCard({ order, onViewOrder }: OrderCardProps) {
   const StatusIcon = status.icon;
 
   return (
-    <article className="flex items-center gap-3 rounded-3xl border border-zinc-200 bg-white p-2 sm:gap-4">
+    <article className="flex items-center gap-3 rounded-full border border-zinc-200 bg-white p-2 sm:gap-4">
       <div
         className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-full ${status.color}`}
       >
@@ -28,7 +28,7 @@ export default function OrderCard({ order, onViewOrder }: OrderCardProps) {
         alt={order.productName}
         width={56}
         height={56}
-        className="h-14 w-14 shrink-0 rounded-2xl object-cover"
+        className="h-14 w-14 shrink-0 rounded-full object-cover"
       />
 
       <div className="min-w-0 flex-1 py-1">
@@ -50,7 +50,7 @@ export default function OrderCard({ order, onViewOrder }: OrderCardProps) {
         variant="tertiary"
         aria-label={`View ${order.productName}`}
         onPress={() => onViewOrder(order.id)}
-        className="mr-1 h-10 w-10 shrink-0 rounded-full text-zinc-600"
+        className="mr-1 h-12 w-12 shrink-0 rounded-full text-zinc-600"
       >
         <FiEye className="h-4 w-4" aria-hidden="true" />
       </Button>

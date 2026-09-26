@@ -9,7 +9,7 @@ interface ContactSectionProps {
 
 export default function ContactSection({ onReportIssue }: ContactSectionProps) {
   return (
-    <section className="mt-8 rounded-3xl border border-zinc-200 bg-white p-5 sm:p-6">
+    <section className="mt-20 flex flex-col items-center p-5 text-center sm:p-6">
       <div>
         <p className="text-xs font-medium text-[#9F54F7]">Need assistance?</p>
 

@@ -105,7 +105,7 @@ export default function ProductModal({
               <Modal.Footer className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <Link
                   href={`/products/${order.productId}`}
-                  className="flex h-10 items-center justify-center rounded-xl bg-[#9F54F7] px-4 text-sm font-medium text-white transition-colors hover:bg-[#8B45E0]"
+                  className="flex h-10 w-full items-center justify-center rounded-xl bg-[#9F54F7] px-4 text-sm font-medium text-white transition-colors hover:bg-[#8B45E0]"
                 >
                   View in page
                 </Link>
@@ -113,7 +113,7 @@ export default function ProductModal({
                 <Button
                   variant="danger-soft"
                   onPress={() => setIsCancelModalOpen(true)}
-                  className="h-10 rounded-xl text-red-500"
+                  className="h-10 w-full rounded-xl text-red-500"
                 >
                   Cancel Order
                 </Button>

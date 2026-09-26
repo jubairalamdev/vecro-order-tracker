@@ -59,7 +59,7 @@ export default function ReportIssueModal({
               <Button
                 variant="outline"
                 onPress={onClose}
-                className="rounded-xl"
+                className="w-full rounded-xl"
               >
                 Cancel
               </Button>
@@ -67,7 +67,7 @@ export default function ReportIssueModal({
               <Button
                 variant="primary"
                 onPress={handleSubmit}
-                className="rounded-xl bg-[#9F54F7] text-white hover:bg-[#8B45E0]"
+                className="w-full rounded-xl bg-[#9F54F7] text-white hover:bg-[#8B45E0]"
               >
                 Submit
               </Button>

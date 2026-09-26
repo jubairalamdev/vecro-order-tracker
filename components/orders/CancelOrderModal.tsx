@@ -43,7 +43,7 @@ export default function CancelOrderModal({
                 <Button
                   variant="outline"
                   onPress={onClose}
-                  className="rounded-xl"
+                  className="w-full rounded-xl"
                 >
                   Keep Order
                 </Button>
@@ -51,7 +51,7 @@ export default function CancelOrderModal({
                 <Button
                   variant="danger"
                   onPress={onConfirm}
-                  className="rounded-xl"
+                  className="w-full rounded-xl"
                 >
                   Cancel Order
                 </Button>

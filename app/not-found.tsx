@@ -1,11 +1,5 @@
 import { Link } from "@heroui/react";
-import {
-  FiArrowLeft,
-  FiArrowUpRight,
-  FiClock,
-  FiHome,
-  FiPackage,
-} from "react-icons/fi";
+import { FiArrowUpRight, FiClock, FiHome } from "react-icons/fi";
 
 export default function NotFound() {
   return (
@@ -77,22 +71,13 @@ export default function NotFound() {
 
             {/* 404 */}
             <div className="relative mx-auto mt-8 w-fit">
-              <span className="select-none text-[clamp(7rem,22vw,15rem)] font-black leading-none tracking-[-0.08em] text-[#9F54F7]/10">
+              <span className="select-none text-[clamp(6rem,18vw,10rem)] font-black leading-none tracking-[-0.08em] text-[#9F54F7]/10">
                 404
               </span>
-
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex h-24 w-24 items-center justify-center rounded-[2rem] border border-[#9F54F7]/20 bg-white shadow-[0_15px_50px_rgba(159,84,247,0.12)] sm:h-28 sm:w-28">
-                  <FiPackage
-                    className="h-10 w-10 text-[#9F54F7] sm:h-12 sm:w-12"
-                    aria-hidden="true"
-                  />
-                </div>
-              </div>
             </div>
 
             {/* Heading */}
-            <h1 className="mx-auto mt-2 max-w-2xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
+            <h1 className="mx-auto mt-2 max-w-2xl text-4xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
               This page is
               <span className="text-[#9F54F7]"> coming soon.</span>
             </h1>
@@ -123,37 +108,8 @@ export default function NotFound() {
               </Link>
             </div>
 
-            {/* Bottom Hint */}
-            <div className="mx-auto mt-14 flex max-w-md items-center justify-center gap-3 rounded-2xl border border-zinc-200 bg-white p-3 text-left">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#9F54F7]/10 text-[#9F54F7]">
-                <FiClock className="h-4 w-4" aria-hidden="true" />
-              </div>
-
-              <div>
-                <p className="text-xs font-semibold text-zinc-800">
-                  Worth the wait
-                </p>
-
-                <p className="mt-0.5 text-xs text-zinc-500">
-                  We&apos;re putting the finishing touches on this page.
-                </p>
-              </div>
-            </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="flex flex-col items-center justify-between gap-3 border-t border-zinc-200 py-5 text-xs text-zinc-400 sm:flex-row">
-          <p>© {new Date().getFullYear()} Vecro Soft</p>
-
-          <Link
-            href="/"
-            className="flex items-center gap-1.5 transition-colors hover:text-zinc-700"
-          >
-            <FiArrowLeft className="h-3.5 w-3.5" aria-hidden="true" />
-            Return home
-          </Link>
-        </footer>
       </div>
     </main>
   );
