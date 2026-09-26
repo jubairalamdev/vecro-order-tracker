@@ -1,11 +1,14 @@
 "use client";
 
+import OrderHeader from "./OrderHeader";
 import { orders } from "./orderData";
 
 export default function OrderTrackerPage() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] text-[#18181B]">
       <div className="mx-auto w-full max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
+        <OrderHeader />
+
         <section className="mx-auto mt-10 max-w-5xl">
           <div className="mb-7">
             <p className="text-sm font-medium text-[#9F54F7]">
