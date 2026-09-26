@@ -1,8 +1,25 @@
 "use client";
 
+import { useState } from "react";
 import OrderHeader from "./OrderHeader";
+import Orders from "./Orders";
+import ProductModal from "./ProductModal";
+import { orders as initialOrders } from "./orderData";
 
 export default function OrderTrackerPage() {
+  const [orders] = useState(initialOrders);
+  const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
+
+  const selectedOrder =
+    orders.find((order) => order.id === selectedOrderId) ?? null;
+
+  const handleViewOrder = (orderId: string) => {
+    setSelectedOrderId(orderId);
+  };
+
+  const handleCloseProductModal = () => {
+    setSelectedOrderId(null);
+  };
   return (
     <main className="min-h-screen bg-[#FAFAFA] text-[#18181B]">
       <div className="mx-auto w-full max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
@@ -23,8 +40,16 @@ export default function OrderTrackerPage() {
               place.
             </p>
           </div>
+
+          <Orders orders={orders} onViewOrder={handleViewOrder} />
         </section>
       </div>
+
+      <ProductModal
+        order={selectedOrder}
+        isOpen={selectedOrder !== null}
+        onClose={handleCloseProductModal}
+      />
     </main>
   );
 }
