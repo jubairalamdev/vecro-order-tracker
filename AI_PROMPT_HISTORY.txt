@@ -1,0 +1,34 @@
+=> Task 1: Order Tracking Screen
+=> Used ChatGPT
+
+#### Prompt no. 1: #### 
+You are a senior Frontend web developer. You will design a purple-white themed e-commerce Order Tracking page using Next.js, Tailwind CSS, Javascript, and React Icons for icons library. This tracker will be handled with mock json data. So now your work is listed below (components):
+
+1. Make a order tracker page component, this will contain a header with heading and sub heading, Orders placed (seperate component), and a simple contact us.
+2. Orders component: This will be just a wrapper to hold and map the orders inside it. give it grid layout with stacked card design.
+3. Single Order card component: Design the wide stacking card fully rounded. keep it at padding-2. at the left of it, place another circle div with different status colors that wil dynamically render. also inside this circle, a white icon of that specific status will be shown. aside of this circle, The product image fully rounded, and aside that, Product Name. below the name, it's delivery status, a dot and inlined date of delivery. at the right, place a view icon with bg-muted circle div that will open a modal of products.
+4. Product modal component: It will dynamically open the modal with product ID name to avoid multi modal opening. In the modal it will contain these below informations:
+
+- Current order status
+- Estimated Delivary date
+- Product summary
+- Product image aside of it's name at the top
+- bottom 2 columed button, "View in page" and "Cancel Order"
+- Cancel order opens another dynamic confirmation modal which will delete the product or just make it hidden in the frontend.
+
+5. Contact section: A simple contact section with header, "Have an Issue?" then 2 columned buttons, "Contact us" which will take to contact page, "Report Issue" - opens a modal where there's an input for issue writting and a cancel, submit button. Submit button does a Report Submitted toast. Cacnel button just closes the modal.
+
+This is the plan, At the top make a boxed fully rounded header with logo, Vecro Soft and few dummy nav links in the middle. At the right, a get started button leads to signup page.
+
+Use HeroUi V3 to make all the components and also use React Toastify for toasts. Make it fully on the frontend side and just make the needed components. We will do all the works in the cmponents while keeping component page seperate, will keep the main page.jsx clean with just an import of that page. Ask me quetions if needed first..
+
+
+#### Prompt 2: ####
+give me the install commands of all the used packages and then give me the above planned components
+
+
+#### Prompt 3: ####
+Now design a Page coming soon for the not-found.jsx page
+
+#### Prompt 4: ####
+Make me a quick minimal readme file for this project
