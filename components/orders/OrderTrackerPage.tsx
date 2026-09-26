@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import OrderHeader from "./OrderHeader";
 import Orders from "./Orders";
 import ProductModal from "./ProductModal";
 import { orders as initialOrders } from "./orderData";
 
 export default function OrderTrackerPage() {
-  const [orders] = useState(initialOrders);
+  const [orders, setOrders] = useState(initialOrders);
   const [selectedOrderId, setSelectedOrderId] = useState<string | null>(null);
 
   const selectedOrder =
@@ -20,6 +21,17 @@ export default function OrderTrackerPage() {
   const handleCloseProductModal = () => {
     setSelectedOrderId(null);
   };
+
+  const handleCancelOrder = (orderId: string) => {
+    setOrders((currentOrders) =>
+      currentOrders.filter((order) => order.id !== orderId)
+    );
+
+    handleCloseProductModal();
+
+    toast.success(`Order #${orderId} has been cancelled.`);
+  };
+
   return (
     <main className="min-h-screen bg-[#FAFAFA] text-[#18181B]">
       <div className="mx-auto w-full max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
@@ -49,7 +61,10 @@ export default function OrderTrackerPage() {
         order={selectedOrder}
         isOpen={selectedOrder !== null}
         onClose={handleCloseProductModal}
+        onCancelOrder={handleCancelOrder}
       />
+
+      <ToastContainer position="bottom-right" />
     </main>
   );
 }
